@@ -13,10 +13,10 @@ const Navbar = () => {
         <NavLink> All Art & craft Items</NavLink>
       </li>
       <li>
-        <NavLink>Add Craft Item</NavLink>
+        <NavLink to="/craft">Add Craft</NavLink>
       </li>
       <li>
-        <NavLink>My Art&Craft List</NavLink>
+        <NavLink to="/craftList">Ar & Craft List</NavLink>
       </li>
     </>
   );
@@ -77,6 +77,7 @@ const Navbar = () => {
             </li>
             <li>
               <NavLink
+                to="/craft"
                 className={({ isActive }) =>
                   isActive
                     ? "text-purple-700 border-2 border-purple-400 hover:bg-purple-100 font-bold font-display"
@@ -88,6 +89,7 @@ const Navbar = () => {
             </li>
             <li>
               <NavLink
+                to="/craftList"
                 className={({ isActive }) =>
                   isActive
                     ? "text-purple-700 border-2 border-purple-400 hover:bg-purple-100 font-bold font-display"
@@ -131,9 +133,15 @@ const Navbar = () => {
               </ul>
             </div>
           ) : (
-            <Link to="/signin">
-              <button className="btn btn-sm btn-ghost">SignIn</button>
-            </Link>
+            <div>
+              {" "}
+              <Link to="/signup">
+                <button className="btn btn-sm btn-ghost">Signup</button>
+              </Link>
+              <Link to="/signin">
+                <button className="btn btn-sm btn-ghost">SignIn</button>
+              </Link>
+            </div>
           )}
         </div>
       </div>
