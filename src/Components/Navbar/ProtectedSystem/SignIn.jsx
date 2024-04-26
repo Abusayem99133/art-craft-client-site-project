@@ -9,8 +9,15 @@ const SignIn = () => {
 
   return (
     <div className="">
-      <div className="">
-        <div className="w-1/2 flex mx-auto border-2 rounded-xl ">
+      <div
+        className="hero min-h-screen bg-base-50"
+        style={{
+          backgroundImage:
+            "url(https://i.postimg.cc/wT5YWMXk/house-in-nature-4k-1540131726-jpg.webp)",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+        <div className="w-1/3 flex mx-auto  ">
           <form className="card-body">
             <div className="form-control">
               <label className="label">
@@ -36,7 +43,7 @@ const SignIn = () => {
               />
               <span
                 onClick={() => setShowPassword(!showPassword)}
-                className="ml-96 -mt-8"
+                className="ml-80 -mt-8"
               >
                 {showPassword ? <FaEyeSlash /> : <FaEye />}
               </span>
@@ -48,14 +55,14 @@ const SignIn = () => {
             <div className="form-control mt-6">
               <button className="btn btn-primary ">Sign In</button>
             </div>
+            <p className="p-3   text-white">
+              Please Sign Up ?
+              <Link to="/signup" className="btn-link">
+                Sign Up
+              </Link>
+            </p>
           </form>
         </div>
-        <p className="p-3 ml-80  text-white">
-          Please Sign Up ?
-          <Link to="/signup" className="btn-link">
-            Sign Up
-          </Link>
-        </p>
       </div>
     </div>
   );
