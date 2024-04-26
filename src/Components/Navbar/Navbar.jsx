@@ -1,6 +1,9 @@
-import { NavLink } from "react-router-dom";
-
+import { Link, NavLink } from "react-router-dom";
+import profile from "../../assets/Profile.jpg";
+import { AuthContext } from "../../Provider/AuthProvider";
+import { useContext } from "react";
 const Navbar = () => {
+  const { user } = useContext(AuthContext);
   const Navlinks = (
     <>
       <li>
@@ -45,7 +48,7 @@ const Navbar = () => {
               {Navlinks}
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">daisyUI</a>
+          <a className="font-display font-bold text-2xl">Art & Craft</a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
@@ -54,7 +57,7 @@ const Navbar = () => {
                 to="/"
                 className={({ isActive }) =>
                   isActive
-                    ? "text-purple-700 border-2 border-purple-400 hover:bg-purple-600 font-bold font-display"
+                    ? "text-purple-700 border-2 border-purple-400 hover:bg-purple-100 font-bold font-display"
                     : "font-bold font-display"
                 }
               >
@@ -62,18 +65,76 @@ const Navbar = () => {
               </NavLink>
             </li>
             <li>
-              <NavLink>All Art & craft Items</NavLink>
+              <NavLink
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-purple-700 border-2 border-purple-400 hover:bg-purple-100 font-bold font-display"
+                    : "font-bold font-display"
+                }
+              >
+                All Art & craft Items
+              </NavLink>
             </li>
             <li>
-              <NavLink>Add Craft Item</NavLink>
+              <NavLink
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-purple-700 border-2 border-purple-400 hover:bg-purple-100 font-bold font-display"
+                    : "font-bold font-display"
+                }
+              >
+                Add Craft Item
+              </NavLink>
             </li>
             <li>
-              <NavLink>My Art&Craft List</NavLink>
+              <NavLink
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-purple-700 border-2 border-purple-400 hover:bg-purple-100 font-bold font-display"
+                    : "font-bold font-display"
+                }
+              >
+                My Art&Craft List
+              </NavLink>
             </li>
           </ul>
         </div>
-        <div className="navbar-end">
-          <a className="btn">Button</a>
+        <div className="mt-20 -ml-5  md:ml-0 md:mt-0  navbar-end">
+          {user?.email ? (
+            <div className="dropdown dropdown-end">
+              <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                <div className="w-10">
+                  <img
+                    className="rounded-full"
+                    alt="user photo"
+                    src={user?.photoURL || profile}
+                  />
+                </div>
+              </label>
+              <ul
+                tabIndex={0}
+                className="menu menu-sm dropdown-content mt-3 z-[10] p-2 shadow bg-base-100 rounded-box w-52"
+              >
+                <li>
+                  <button className="btn btn-sm btn-ghost">
+                    {user?.displayName || "User Name not found"}
+                  </button>
+                </li>
+                <li>
+                  <button
+                    onClick={() => logOut()}
+                    className="btn btn-sm btn-ghost"
+                  >
+                    Logout
+                  </button>
+                </li>
+              </ul>
+            </div>
+          ) : (
+            <Link to="/signin">
+              <button className="btn btn-sm btn-ghost">SignIn</button>
+            </Link>
+          )}
         </div>
       </div>
     </div>
