@@ -30,7 +30,7 @@ const SignUp = () => {
       toast.error("please show the on character in Uppercase and Lowercase");
       return;
     } else {
-      toast.success("Successfully Register!");
+      toast.success("Successfully SignUp!");
     }
     createUser(email, password)
       .then(() => {
@@ -39,7 +39,8 @@ const SignUp = () => {
         navigate(from);
       })
       .catch((error) => {
-        toast.error("Error Register.");
+        console.log(error.message);
+        toast.error("Error Sign Up.");
       });
   };
 

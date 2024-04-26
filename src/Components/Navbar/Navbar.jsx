@@ -3,7 +3,7 @@ import profile from "../../assets/Profile.jpg";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { useContext } from "react";
 const Navbar = () => {
-  const { user } = useContext(AuthContext);
+  const { user, logOut } = useContext(AuthContext);
   const Navlinks = (
     <>
       <li>
@@ -50,8 +50,8 @@ const Navbar = () => {
           </div>
           <a className="font-display font-bold text-2xl">Art & Craft</a>
         </div>
-        <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
+        <div className="navbar-center  hidden lg:flex">
+          <ul className="menu space-x-4 menu-horizontal px-1">
             <li>
               <NavLink
                 to="/"
@@ -83,7 +83,7 @@ const Navbar = () => {
                     : "font-bold font-display"
                 }
               >
-                Add Craft Item
+                Add Craft
               </NavLink>
             </li>
             <li>
@@ -94,7 +94,7 @@ const Navbar = () => {
                     : "font-bold font-display"
                 }
               >
-                My Art&Craft List
+                Art & Craft List
               </NavLink>
             </li>
           </ul>
