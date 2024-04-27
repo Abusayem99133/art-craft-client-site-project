@@ -1,4 +1,33 @@
 const AddCraft = () => {
+  const handleAddCraft = (event) => {
+    event.preventDefault();
+    const form = new FormData(event.currentTarget);
+    const item_name = form.get("item_name");
+    const image = form.get("image");
+    const userEmail = form.get("userEmail");
+    const sub_Name = form.get("sub_Name");
+    const shortDescription = form.get("shortDescription");
+    const price = form.get("price");
+    const customization = form.get("customization");
+    const rating = form.get("rating");
+    const processing_time = form.get("processing_time");
+    const userName = form.get("userName");
+    const stockStatus = form.get("stockStatus");
+    const addCraft = {
+      image,
+      item_name,
+      sub_Name,
+      shortDescription,
+      price,
+      rating,
+      customization,
+      processing_time,
+      stockStatus,
+      userEmail,
+      userName,
+    };
+    console.log(addCraft);
+  };
   return (
     <div className="">
       <div
@@ -6,7 +35,7 @@ const AddCraft = () => {
       hero min-h-screen  rounded-[44px]"
         style={{
           backgroundImage:
-            "url(https://i.postimg.cc/gcMn5Fxh/pexels-karamuse-2346120.jpg)",
+            "url(https://i.postimg.cc/sDHkdbyR/pexels-pixabay-159644.jpg)",
         }}
       >
         <div className="shadow-lg p-5 border ">
@@ -26,12 +55,10 @@ const AddCraft = () => {
             </p>
           </div>
           {/* form */}
-          <form>
+          <form onSubmit={handleAddCraft}>
             <div className="flex gap-8 ">
               <div className="flex-1">
-                <label className="block mb-2 dark:text-white" htmlFor="name">
-                  Item Name
-                </label>
+                <label className="block mb-2 dark:text-white">Item Name</label>
                 <input
                   className="w-full p-2 border rounded-md focus:outline-[#FF497C]"
                   type="text"
@@ -40,15 +67,12 @@ const AddCraft = () => {
                   name="item_name"
                 />
 
-                <label
-                  className="block mt-4 mb-2 dark:text-white"
-                  htmlFor="brand"
-                >
+                <label className="block mt-4 mb-2 dark:text-white">
                   subcategory_Name
                 </label>
                 <select
-                  name="brand"
-                  id="brand"
+                  name="sub_Name"
+                  id="subcategory_Name"
                   className="w-full p-2 border rounded-md focus:outline-[#FF497C]"
                   type="text"
                   placeholder="Select Brand"
@@ -82,9 +106,9 @@ const AddCraft = () => {
                 <input
                   className="w-full p-2 border rounded-md focus:outline-[#FF497C]"
                   type="text"
-                  placeholder="short description"
-                  id="description"
-                  name="description"
+                  placeholder="short shortDescription"
+                  id="shortDescription"
+                  name="shortDescription"
                 />
                 <label
                   className="block mt-4 mb-2 dark:text-white"
@@ -108,7 +132,7 @@ const AddCraft = () => {
                   type="text"
                   placeholder="user email"
                   id="email"
-                  name="email"
+                  name="userEmail"
                 />
               </div>
               {/* Right side */}
@@ -134,7 +158,7 @@ const AddCraft = () => {
                   type="text"
                   placeholder="Enter type"
                   id="type"
-                  name="type"
+                  name="customization"
                 />
 
                 <label className="block mt-4 mb-2 text-white" htmlFor="rating">
@@ -161,7 +185,7 @@ const AddCraft = () => {
                   type="number"
                   placeholder="processing time"
                   id="time"
-                  name="time"
+                  name="processing_time"
                 />
 
                 <label className="block mt-4 mb-2 text-white">User Name</label>
@@ -186,7 +210,7 @@ const AddCraft = () => {
                   type="number"
                   placeholder="stockStatus"
                   id="status"
-                  name="status"
+                  name="stockStatus"
                 />
               </div>
             </div>
