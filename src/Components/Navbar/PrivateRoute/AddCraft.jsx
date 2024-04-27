@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { AuthContext } from "../../../Provider/AuthProvider";
-
+import Swal from "sweetalert2";
 const AddCraft = () => {
   const { user } = useContext(AuthContext);
 
@@ -17,7 +17,7 @@ const AddCraft = () => {
     const customization = form.get("customization");
     const rating = form.get("rating");
     const processing_time = form.get("processing_time");
-    const userName = form.get("userName");
+    const userName = user.DisplayName;
     const stockStatus = form.get("stockStatus");
     const addCraft = {
       image,
@@ -43,6 +43,15 @@ const AddCraft = () => {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
+
+        if (data.insertedId) {
+          Swal.fire({
+            title: "Success!",
+            text: "User Added Successfully",
+            icon: "success",
+            confirmButtonText: "Done",
+          });
+        }
       });
   };
   return (
@@ -183,9 +192,6 @@ const AddCraft = () => {
                 </label>
                 <input
                   className="w-full p-2 border rounded-md focus:outline-purple-200"
-                  maxLength={5}
-                  max={5}
-                  min={0}
                   type="number"
                   placeholder="Rating"
                   id="rating"
@@ -196,10 +202,7 @@ const AddCraft = () => {
                 </label>
                 <input
                   className="w-full p-2 border rounded-md focus:outline-purple-200"
-                  maxLength={5}
-                  max={5}
-                  min={0}
-                  type="number"
+                  type="text"
                   placeholder="processing time"
                   id="time"
                   name="processing_time"
@@ -208,9 +211,6 @@ const AddCraft = () => {
                 <label className="block mt-4 mb-2 text-white">User Name</label>
                 <input
                   className="w-full p-2 border rounded-md focus:outline-purple-200"
-                  maxLength={5}
-                  max={5}
-                  min={0}
                   type="text"
                   placeholder="User Name"
                   id="user"
@@ -221,10 +221,7 @@ const AddCraft = () => {
                 </label>
                 <input
                   className="w-full p-2 border rounded-md focus:outline-purple-200"
-                  maxLength={5}
-                  max={5}
-                  min={0}
-                  type="number"
+                  type="text"
                   placeholder="stockStatus"
                   id="status"
                   name="stockStatus"
