@@ -1,10 +1,16 @@
+import { useContext } from "react";
+import { AuthContext } from "../../../Provider/AuthProvider";
+
 const AddCraft = () => {
+  const { user } = useContext(AuthContext);
+
   const handleAddCraft = (event) => {
+    console.log(user);
     event.preventDefault();
     const form = new FormData(event.currentTarget);
     const item_name = form.get("item_name");
     const image = form.get("image");
-    const userEmail = form.get("userEmail");
+    const userEmail = user.email;
     const sub_Name = form.get("sub_Name");
     const shortDescription = form.get("shortDescription");
     const price = form.get("price");
@@ -27,6 +33,17 @@ const AddCraft = () => {
       userName,
     };
     console.log(addCraft);
+    fetch("http://localhost:5000/craft", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(addCraft),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+      });
   };
   return (
     <div className="">
