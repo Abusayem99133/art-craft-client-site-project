@@ -3,9 +3,10 @@ import { useLoaderData, useParams } from "react-router-dom";
 
 const CraftDetails = () => {
   const data = useLoaderData();
-  const { _id } = useParams();
-  const artCraft = parseInt(_id);
-  const craftDetail = data?.find((craftDetail) => craftDetail._id === artCraft);
+  console.log(data);
+  const { id } = useParams();
+  const artCraft = parseInt(id);
+  const craftDetail = data?.find((craftDetail) => craftDetail.id === artCraft);
   console.log(data);
   const {
     image,

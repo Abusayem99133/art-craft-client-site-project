@@ -1,4 +1,4 @@
-const ArtListed = ({ craft }) => {
+const AllCraftList = ({ craft }) => {
   //   console.log(craft);
   const {
     image,
@@ -20,7 +20,7 @@ const ArtListed = ({ craft }) => {
           <tr>
             <th>1</th>
             <td className="">{item_name}</td>
-            <td>Quality Control Specialist</td>
+            <td></td>
             <td>Littel, Schaden and Vandervort</td>
             <td>Canada</td>
             <td>12/16/2020</td>
@@ -32,4 +32,4 @@ const ArtListed = ({ craft }) => {
   );
 };
 
-export default ArtListed;
+export default AllCraftList;

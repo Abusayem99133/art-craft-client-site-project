@@ -7,10 +7,10 @@ const Navbar = () => {
   const Navlinks = (
     <>
       <li>
-        <NavLink>Home</NavLink>
+        <NavLink to="/">Home</NavLink>
       </li>
       <li>
-        <NavLink> All Art & craft Items</NavLink>
+        <NavLink to="/craftItem"> All Art & craft Items</NavLink>
       </li>
       <li>
         <NavLink to="/craft">Add Craft</NavLink>
@@ -66,6 +66,7 @@ const Navbar = () => {
             </li>
             <li>
               <NavLink
+                to="/craftItem"
                 className={({ isActive }) =>
                   isActive
                     ? "text-purple-700 border-2 border-purple-400 hover:bg-purple-100 font-bold font-display"
