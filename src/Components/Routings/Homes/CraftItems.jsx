@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-
+import PropTypes from "prop-types";
 const CraftItems = ({ craft }) => {
   console.log(craft);
   const {
@@ -43,5 +43,7 @@ const CraftItems = ({ craft }) => {
     </div>
   );
 };
-
+CraftItems.propTypes = {
+  craft: PropTypes.node,
+};
 export default CraftItems;

@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../../Provider/AuthProvider";
+import { Link } from "react-router-dom";
 
 const ArtList = () => {
   const { user } = useContext(AuthContext);
@@ -49,6 +50,7 @@ const ArtList = () => {
         }
       });
   };
+
   return (
     <div>
       <div className="">
@@ -162,17 +164,17 @@ const ArtList = () => {
                 </div>
               </div>
 
-              <div className="flex space-x-7">
-                <input
-                  className="px-4 w-full py-2 mt-4 rounded hover:bg-purple-800  bg-purple-500 duration-200 text-white cursor-pointer font-semibold"
-                  type="submit"
-                  value="Update"
-                />
-                <input
-                  className="px-4 w-full py-2 mt-4 rounded hover:bg-purple-800  bg-purple-500 duration-200 text-white cursor-pointer font-semibold"
-                  type="submit"
-                  value="Delete"
-                />
+              <div className="flex justify-around">
+                <Link to="/update">
+                  <button className="px-4 w-full py-2 mt-4 rounded hover:bg-purple-800 bg-purple-500 duration-200 text-white cursor-pointer font-semibold">
+                    Update
+                  </button>
+                </Link>
+                <Link>
+                  <button className="px-4 w-full py-2 mt-4 rounded hover:bg-purple-800 bg-purple-500 duration-200 text-white cursor-pointer font-semibold">
+                    Delete
+                  </button>
+                </Link>
               </div>
             </form>
           </div>

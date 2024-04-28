@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
-import AllCraftList from "../Navbar/PrivateRoute/AllCraftList";
+
+import { Link, NavLink } from "react-router-dom";
 
 const AllCraftItems = () => {
   const { user } = useContext(AuthContext);
@@ -12,23 +13,46 @@ const AllCraftItems = () => {
         setItem(data);
       });
   }, [user]);
+  console.log(item);
+  const { _id } = item;
   return (
     <div>
-      <h1>hlw world</h1>
-      <thead className="table table-xs">
-        <tr>
-          <th></th>
-          <th>Name</th>
-          <th>Job</th>
-          <th>company</th>
-          <th>location</th>
-          <th>Last Login</th>
-          <th>Favorite Color</th>
-        </tr>
-      </thead>
-      {item?.map((craft) => (
-        <AllCraftList key={craft._id} craft={craft}></AllCraftList>
-      ))}
+      <div className="overflow-x-auto">
+        <table className="table table-xs">
+          <thead>
+            <tr>
+              <th>SL</th>
+              <th>Name</th>
+              <th>Subcategory</th>
+              <th>Price</th>
+              <th>Rating</th>
+              <th>Customization</th>
+              <th>Stock Status</th>
+              <th>Details</th>
+            </tr>
+          </thead>
+          <tbody>
+            {item?.map((craft, index) => (
+              <tr key={index}>
+                <td>{`${index + 1}`}</td>
+                <td>{craft.item_name}</td>
+                <td>{craft.sub_Name}</td>
+                <td>{craft.price}</td>
+                <td>{craft.rating}</td>
+                <td>{craft.customization}</td>
+                <td>{craft.stockStatus}</td>
+                {
+                  <NavLink to={`/details/${_id}`}>
+                    <button className="btn bg-purple-500 font-bold">
+                      View Details
+                    </button>
+                  </NavLink>
+                }
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };

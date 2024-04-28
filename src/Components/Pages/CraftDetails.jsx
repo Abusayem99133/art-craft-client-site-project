@@ -3,11 +3,8 @@ import { useLoaderData, useParams } from "react-router-dom";
 
 const CraftDetails = () => {
   const data = useLoaderData();
-  console.log(data);
-  const { id } = useParams();
-  const artCraft = parseInt(id);
-  const craftDetail = data?.find((craftDetail) => craftDetail.id === artCraft);
-  console.log(data);
+  console.log("hlw world", data);
+
   const {
     image,
     item_name,
@@ -18,7 +15,7 @@ const CraftDetails = () => {
     customization,
     processing_time,
     stockStatus,
-  } = craftDetail;
+  } = data;
   return (
     <div>
       <Helmet>

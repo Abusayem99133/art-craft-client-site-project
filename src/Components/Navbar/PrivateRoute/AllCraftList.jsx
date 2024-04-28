@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 const AllCraftList = ({ craft }) => {
   //   console.log(craft);
   const {
@@ -14,22 +15,18 @@ const AllCraftList = ({ craft }) => {
   } = craft;
   // console.log(item.item_name);
   return (
-    <div className="overflow-x-auto">
-      <table className="table table-xs">
-        <tbody>
-          <tr>
-            <th>1</th>
-            <td className="">{item_name}</td>
-            <td></td>
-            <td>Littel, Schaden and Vandervort</td>
-            <td>Canada</td>
-            <td>12/16/2020</td>
-            <td>Blue</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+    <tr>
+      <th>1</th>
+      <td className="">{item_name}</td>
+      <td></td>
+      <td>Littel, Schaden and Vandervort</td>
+      <td>Canada</td>
+      <td>12/16/2020</td>
+      <td>Blue</td>
+    </tr>
   );
 };
-
+AllCraftList.propTypes = {
+  craft: PropTypes.node,
+};
 export default AllCraftList;
