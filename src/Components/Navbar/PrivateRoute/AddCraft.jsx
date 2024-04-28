@@ -10,7 +10,7 @@ const AddCraft = () => {
     const form = new FormData(event.currentTarget);
     const item_name = form.get("item_name");
     const image = form.get("image");
-    const userEmail = user.email;
+    const email = user.email;
     const sub_Name = form.get("sub_Name");
     const shortDescription = form.get("shortDescription");
     const price = form.get("price");
@@ -29,7 +29,7 @@ const AddCraft = () => {
       customization,
       processing_time,
       stockStatus,
-      userEmail,
+      email,
       userName,
     };
     console.log(addCraft);
@@ -156,7 +156,7 @@ const AddCraft = () => {
                   type="text"
                   placeholder="user email"
                   id="email"
-                  name="userEmail"
+                  name="email"
                 />
               </div>
               {/* Right side */}

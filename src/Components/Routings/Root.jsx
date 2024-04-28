@@ -21,12 +21,14 @@ export const router = createBrowserRouter([
         loader: () => fetch("http://localhost:5000/craft"),
       },
       {
-        path: "/details",
+        path: "/details/:_id",
         element: (
           <PrivateRoute>
             <CraftDetails></CraftDetails>
           </PrivateRoute>
         ),
+        loader: ({ params }) =>
+          fetch(`/http://localhost:5000/craft/${params._id}`),
       },
       {
         path: "/craft",

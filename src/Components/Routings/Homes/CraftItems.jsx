@@ -2,23 +2,40 @@ import { NavLink } from "react-router-dom";
 
 const CraftItems = ({ craft }) => {
   console.log(craft);
-  const { image, item_name, price } = craft;
+  const {
+    image,
+    item_name,
+    sub_Name,
+    shortDescription,
+    price,
+    rating,
+    customization,
+    processing_time,
+    stockStatus,
+    _id,
+  } = craft;
   return (
     <div>
-      <div className="card card-compact w-96 bg-base-100 shadow-xl">
-        <figure>
-          <img
-            src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-            alt="Shoes"
-          />
+      <div className=" card mt-2 bg-base-100 shadow-2xl">
+        <figure className="px-10 pt-10">
+          <img src={image} alt="Shoes" className="rounded-xl" />
         </figure>
         <div className="card-body">
-          <h2 className="card-title">Shoes!</h2>
-          <p>If a dog chews shoes whose shoes does he choose?</p>
-
+          <h2 className="card-title">Name:{item_name}</h2>
+          <p>
+            <span className="font-display font-bold">Status:</span>{" "}
+            {stockStatus}
+          </p>
+          <div className="card-actions">
+            <p>
+              <span className="font-display font-bold">Price:</span> {price}
+            </p>
+          </div>
           {
-            <NavLink to="/details">
-              <button className="btn btn-primary">View Details</button>
+            <NavLink to={`/details/${_id}`}>
+              <button className="btn bg-purple-500 font-bold">
+                View Details
+              </button>
             </NavLink>
           }
         </div>
