@@ -16,7 +16,7 @@ const Navbar = () => {
         <NavLink to="/craft">Add Craft</NavLink>
       </li>
       <li>
-        <NavLink to="/craftList">Ar & Craft List</NavLink>
+        <NavLink to="/craftList">Art & Craft List</NavLink>
       </li>
     </>
   );

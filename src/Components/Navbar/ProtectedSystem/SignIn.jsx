@@ -20,13 +20,16 @@ const SignIn = () => {
     const email = form.get("email");
     const password = form.get("password");
     console.log(name, photo, email, password);
-    setSignInError();
-    signInUser(email, password).then((result) => {
-      toast.success("Success SignIn");
-      if (result.user) {
-        navigate(from);
-      }
-    });
+    signInUser(email, password)
+      .then((result) => {
+        toast.success("Success Login");
+        if (result.user) {
+          navigate(from);
+        }
+      })
+      .catch((error) => {
+        toast.error("Login Error");
+      });
   };
   const handleSocialSignin = (socialProvider) => {
     socialProvider().then((result) => {

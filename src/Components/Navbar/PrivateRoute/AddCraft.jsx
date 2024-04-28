@@ -17,7 +17,7 @@ const AddCraft = () => {
     const customization = form.get("customization");
     const rating = form.get("rating");
     const processing_time = form.get("processing_time");
-    const userName = user.DisplayName;
+    const userName = user.displayName;
     const stockStatus = form.get("stockStatus");
     const addCraft = {
       image,
@@ -152,9 +152,7 @@ const AddCraft = () => {
                 <label className="block mt-4 mb-2 text-white">Email</label>
                 <input
                   className="w-full p-2 border rounded-md focus:outline-purple-200"
-                  maxLength={5}
-                  max={5}
-                  min={0}
+                  defaultValue={""}
                   type="text"
                   placeholder="user email"
                   id="email"
@@ -179,14 +177,19 @@ const AddCraft = () => {
                 >
                   Customization
                 </label>
-                <input
+
+                <select
+                  name="customization"
                   className="w-full p-2 border rounded-md focus:outline-[#FF497C]"
                   type="text"
-                  placeholder="Enter type"
-                  id="type"
-                  name="customization"
-                />
-
+                >
+                  <option value="" selected>
+                    Yes
+                  </option>
+                  <option value="" selected>
+                    No
+                  </option>
+                </select>
                 <label className="block mt-4 mb-2 text-white" htmlFor="rating">
                   Rating
                 </label>
@@ -215,6 +218,7 @@ const AddCraft = () => {
                   placeholder="User Name"
                   id="user"
                   name="userName"
+                  defaultValue={""}
                 />
                 <label className="block mt-4 mb-2 text-white">
                   stockStatus

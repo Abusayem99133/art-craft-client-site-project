@@ -1,6 +1,8 @@
 import { NavLink } from "react-router-dom";
 
-const CraftItems = () => {
+const CraftItems = ({ craft }) => {
+  console.log(craft);
+  const { image, item_name, price } = craft;
   return (
     <div>
       <div className="card card-compact w-96 bg-base-100 shadow-xl">
