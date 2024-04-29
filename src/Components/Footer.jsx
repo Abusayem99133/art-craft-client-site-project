@@ -1,6 +1,6 @@
 import { FaFacebook, FaGithub, FaTwitter } from "react-icons/fa";
 import logo from ".././assets/Canvas Haven.png";
-import { SiSnapcraft } from "react-icons/si";
+// import { SiSnapcraft } from "react-icons/si";
 
 const Footer = () => {
   return (

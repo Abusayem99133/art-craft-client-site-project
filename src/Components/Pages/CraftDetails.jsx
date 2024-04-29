@@ -19,7 +19,7 @@ const CraftDetails = () => {
   return (
     <div>
       <Helmet>
-        <title>Property Details</title>
+        <title>Items Details</title>
       </Helmet>
       <div className="hero min-h-screen bg-slate-300 p-8 items-center">
         <div className="lg:flex flex-row-reverse justify-between items-center bg-slate-50 p-6 rounded-md">
