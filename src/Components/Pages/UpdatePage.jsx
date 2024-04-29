@@ -45,7 +45,19 @@ const UpdatePage = () => {
       method: "PUT",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(addCraft),
-    });
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.modifiedCount > 0) {
+          Swal.fire({
+            title: "Success!",
+            text: "Art & Craft Updated Successfully",
+            icon: "success",
+            confirmButtonText: "Wow",
+          });
+          console.log(data);
+        }
+      });
   };
   return (
     <div className="">
