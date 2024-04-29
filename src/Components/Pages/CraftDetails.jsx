@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet-async";
-import { useLoaderData, useParams } from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
 
 const CraftDetails = () => {
   const data = useLoaderData();
@@ -22,8 +22,8 @@ const CraftDetails = () => {
         <title>Property Details</title>
       </Helmet>
       <div className="hero min-h-screen bg-slate-300 p-8 items-center">
-        <div className="lg:flex flex-row-reverse justify-between items-center bg-slate-200 p-6 rounded-md">
-          <img src={image} className="lg:w-[50%] rounded-lg shadow-2xl" />
+        <div className="lg:flex flex-row-reverse justify-between items-center bg-slate-50 p-6 rounded-md">
+          <img src={image} className="lg:w-[50%] rounded-lg " />
           <div>
             {/* <span className="bg-lime-400 ml-0  px-2 rounded-md">New</span> */}
             <h1 className="text-5xl mt-3  font-display font-bold">
@@ -54,12 +54,6 @@ const CraftDetails = () => {
 
             <p className="mt-2  font-display">
               <span className="font-bold">Description:</span> {shortDescription}
-            </p>
-            <p className="mt-2">
-              {" "}
-              <span className="bg-red-300 p-2 rounded-xl items-center">
-                {status}
-              </span>
             </p>
           </div>
         </div>

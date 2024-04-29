@@ -3,6 +3,7 @@ import profile from "../../assets/Profile.jpg";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { useContext } from "react";
 import ThemeBtn from "./ThemeBtn";
+import logo from "../../assets/Canvas Haven.png";
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
   const Navlinks = (
@@ -53,7 +54,7 @@ const Navbar = () => {
               {Navlinks}
             </ul>
           </div>
-          <a className="font-display font-bold text-2xl">Art & Craft</a>
+          <img className="w-60 " src={logo} alt="" />
         </div>
         <div className="navbar-center  hidden lg:flex">
           <ul className="menu space-x-4 menu-horizontal px-1">
