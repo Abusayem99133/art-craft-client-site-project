@@ -1,6 +1,8 @@
 import { useLoaderData } from "react-router-dom";
 import Banner from "./Banner";
 import CraftItems from "./CraftItems";
+import ReviewProject from "../../Pages/ReviewProject";
+import Frequency from "../../Pages/Frequency";
 
 const Home = () => {
   const allCrafts = useLoaderData();
@@ -9,7 +11,7 @@ const Home = () => {
     <div>
       <Banner></Banner>
       <div className="  font-display p-2">
-        <h1 className="text-center text-4xl font-bold mt-4 mb-8 bg-purple-400 p-2">
+        <h1 className="text-center text-4xl font-bold mt-4 mb-8 bg-purple-50 shadow-xl p-2">
           Craft Item
         </h1>
         <p className="text-center">
@@ -24,6 +26,12 @@ const Home = () => {
         {allCrafts?.slice(0 - 6)?.map((craft) => (
           <CraftItems key={craft._id} craft={craft}></CraftItems>
         ))}
+      </div>
+      <div>
+        <ReviewProject></ReviewProject>
+      </div>
+      <div>
+        <Frequency></Frequency>
       </div>
     </div>
   );

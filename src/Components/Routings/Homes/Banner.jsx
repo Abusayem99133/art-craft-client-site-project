@@ -20,7 +20,6 @@ const Banner = () => {
       >
         <SwiperSlide>
           <div className="p-5">
-            <h1 className="text-red-500">one swiper</h1>
             <div
               data-aos="zoom-in-down"
               className="hero min-h-screen  rounded-[44px]"
@@ -54,7 +53,6 @@ const Banner = () => {
         </SwiperSlide>
         <SwiperSlide>
           <div className="p-5">
-            <h1 className="text-red-500">one swipe-2r</h1>
             <div
               className="hero min-h-screen  rounded-[44px]"
               style={{
@@ -84,7 +82,6 @@ const Banner = () => {
         </SwiperSlide>
         <SwiperSlide>
           <div className="p-5">
-            <h1 className="text-red-500">one swiper-3</h1>
             <div
               className="hero min-h-screen  rounded-[44px]"
               style={{
@@ -114,7 +111,6 @@ const Banner = () => {
         </SwiperSlide>
         <SwiperSlide>
           <div className="p-5">
-            <h1 className="text-red-500">one swiper-4</h1>
             <div
               className="hero min-h-screen  rounded-[44px]"
               style={{
@@ -143,7 +139,6 @@ const Banner = () => {
         </SwiperSlide>
         <SwiperSlide>
           <div className="p-5">
-            <h1 className="text-red-500">one swiper-5</h1>
             <div
               className="hero min-h-screen  rounded-[44px]"
               style={{
@@ -172,7 +167,6 @@ const Banner = () => {
         </SwiperSlide>
         <SwiperSlide>
           <div className="p-5">
-            <h1 className="text-red-500">one swiper-6</h1>
             <div
               className="hero min-h-screen  rounded-[44px]"
               style={{
