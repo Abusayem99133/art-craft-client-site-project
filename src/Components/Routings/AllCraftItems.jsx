@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const AllCraftItems = () => {
   const { user } = useContext(AuthContext);
@@ -15,6 +15,7 @@ const AllCraftItems = () => {
   }, [user]);
   console.log(item);
   const { _id } = item;
+  console.log(item._id);
   return (
     <div>
       <div className="overflow-x-auto">
@@ -41,8 +42,9 @@ const AllCraftItems = () => {
                 <td>{craft.rating}</td>
                 <td>{craft.customization}</td>
                 <td>{craft.stockStatus}</td>
+                {/* <td>{craft._id}</td> */}
                 {
-                  <NavLink to={`/details/${_id}`}>
+                  <NavLink to={`/details/${craft._id}`}>
                     <button className="btn bg-purple-500 font-bold">
                       View Details
                     </button>

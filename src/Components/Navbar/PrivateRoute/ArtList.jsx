@@ -50,10 +50,15 @@ const ArtList = () => {
         }
       });
   };
-
+  // const handleUpdate = (_id) => {
+  //   console.log("hlw world");
+  // };
   return (
     <div>
       <div className="">
+        <div>
+          <h1>hlw world</h1>
+        </div>
         <div
           className=" pt-10
       hero min-h-screen  "
@@ -165,8 +170,13 @@ const ArtList = () => {
               </div>
 
               <div className="flex justify-around">
-                <Link to="/update">
-                  <button className="px-4 w-full py-2 mt-4 rounded hover:bg-purple-800 bg-purple-500 duration-200 text-white cursor-pointer font-semibold">
+                <Link
+                // to={`/update/:${}`}
+                >
+                  <button
+                    // onClick={() => handleUpdate(_id)}
+                    className="px-4 w-full py-2 mt-4 rounded hover:bg-purple-800 bg-purple-500 duration-200 text-white cursor-pointer font-semibold"
+                  >
                     Update
                   </button>
                 </Link>
