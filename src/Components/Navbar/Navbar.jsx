@@ -16,16 +16,20 @@ const Navbar = () => {
         <NavLink to="/craft">Add Craft</NavLink>
       </li>
       <li>
-        <NavLink to="/craftList">Art & Craft List</NavLink>
+        <NavLink to="/craftList">My Art & Craft List</NavLink>
       </li>
     </>
   );
   return (
     <div>
-      <div className="navbar bg-base-100">
+      <div className="navbar bg-purple-200">
         <div className="navbar-start">
           <div className="dropdown">
-            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+            <div
+              tabIndex={0}
+              role="button"
+              className="btn btn-ghost text-purple-700 lg:hidden"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -97,7 +101,7 @@ const Navbar = () => {
                     : "font-bold font-display"
                 }
               >
-                Art & Craft List
+                My Art & Craft List
               </NavLink>
             </li>
           </ul>
@@ -134,13 +138,17 @@ const Navbar = () => {
               </ul>
             </div>
           ) : (
-            <div>
+            <div className="space-x-4 p-4">
               {" "}
               <Link to="/signup">
-                <button className="btn btn-sm btn-ghost">Signup</button>
+                <button className="btn btn-sm bg-lime-100 hover:bg-purple-300">
+                  Signup
+                </button>
               </Link>
               <Link to="/signin">
-                <button className="btn btn-sm btn-ghost">SignIn</button>
+                <button className="btn btn-sm bg-lime-100 hover:bg-purple-300">
+                  SignIn
+                </button>
               </Link>
             </div>
           )}

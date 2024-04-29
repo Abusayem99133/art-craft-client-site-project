@@ -1,21 +1,21 @@
-import { useContext, useEffect, useState } from "react";
-import { AuthContext } from "../../Provider/AuthProvider";
+// import { useContext, useEffect, useState } from "react";
+// import { AuthContext } from "../../Provider/AuthProvider";
 
-import { NavLink } from "react-router-dom";
+import { NavLink, useLoaderData } from "react-router-dom";
 
 const AllCraftItems = () => {
-  const { user } = useContext(AuthContext);
-  const [item, setItem] = useState([]);
-  useEffect(() => {
-    fetch(`http://localhost:5000/artCraft/${user?.email}`)
-      .then((res) => res.json())
-      .then((data) => {
-        setItem(data);
-      });
-  }, [user]);
+  const item = useLoaderData();
   console.log(item);
-  const { _id } = item;
-  console.log(item._id);
+  // const { user } = useContext(AuthContext);
+  // const [item, setItem] = useState([]);
+  // useEffect(() => {
+  //   fetch(`http://localhost:5000/artCraft`)
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       setItem(data);
+  //     });
+  // }, [user]);
+
   return (
     <div>
       <div className="overflow-x-auto">
@@ -44,7 +44,7 @@ const AllCraftItems = () => {
                 <td>{craft.stockStatus}</td>
                 {/* <td>{craft._id}</td> */}
                 {
-                  <NavLink to={`/details/${craft._id}`}>
+                  <NavLink to={`/details/${craft?._id}`}>
                     <button className="btn bg-purple-500 font-bold">
                       View Details
                     </button>

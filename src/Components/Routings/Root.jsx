@@ -53,6 +53,7 @@ export const router = createBrowserRouter([
       {
         path: "/craftItem",
         element: <AllCraftItems></AllCraftItems>,
+        loader: () => fetch("http://localhost:5000/craft"),
       },
       {
         path: "/signin",
