@@ -3,22 +3,23 @@ import Swal from "sweetalert2";
 import { AuthContext } from "../../../Provider/AuthProvider";
 
 import { IoLogoUsd } from "react-icons/io5";
+import { Link } from "react-router-dom";
 const ArtList = () => {
   const { user } = useContext(AuthContext);
 
-  const [sortItem, setSortItem] = useState([]);
+  const [items, setItems] = useState([]);
 
   useEffect(() => {
     fetch(`http://localhost:5000/artCraft/${user?.email}`)
       .then((res) => res.json())
       .then((data) => {
-        setSortItem(data);
+        setItems(data);
       });
   }, [user]);
 
   return (
     <div className=" mt-6 gap-6  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-      {sortItem?.map((item, index) => (
+      {items?.map((item, index) => (
         <div key={index} className="card mt-2  bg-slate-100 shadow-2xl">
           <figure className="px-10 pt-10">
             <img src={item?.image} alt="Shoes" />
@@ -37,9 +38,11 @@ const ArtList = () => {
             <p>Status: {item?.stockStatus}</p>
 
             <div className="card-actions justify-between">
-              <button className="btn bg-purple-700 hover:bg-purple-600">
-                Update
-              </button>
+              <Link to={`/update/${item._id}`}>
+                <button className="btn bg-purple-700 hover:bg-purple-600">
+                  Update
+                </button>
+              </Link>
               <button className="btn bg-purple-700 hover:bg-purple-600">
                 Delete
               </button>

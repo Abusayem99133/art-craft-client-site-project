@@ -2,6 +2,7 @@ import { Link, NavLink } from "react-router-dom";
 import profile from "../../assets/Profile.jpg";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { useContext } from "react";
+import ThemeBtn from "./ThemeBtn";
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
   const Navlinks = (
@@ -106,7 +107,9 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
+
         <div className="mt-20 -ml-5  md:ml-0 md:mt-0  navbar-end">
+          <ThemeBtn></ThemeBtn>
           {user?.email ? (
             <div className="dropdown dropdown-end">
               <label tabIndex={0} className="btn btn-ghost btn-circle avatar">

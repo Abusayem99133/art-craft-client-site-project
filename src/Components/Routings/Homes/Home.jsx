@@ -8,14 +8,15 @@ const Home = () => {
   return (
     <div>
       <Banner></Banner>
-      <div className=" bg-purple-400 font-display p-5">
-        <h1 className="text-center text-4xl font-bold mt-4 mb-8">Craft Item</h1>
+      <div className="  font-display p-2">
+        <h1 className="text-center text-4xl font-bold mt-4 mb-8 bg-purple-400 p-2">
+          Craft Item
+        </h1>
         <p className="text-center">
           Buy your Craft Items from rfleshop with a low price and best
           satisfaction rate and free delivery. we always care about our customer
-          satisfaction. Craft & Decor. <br /> Sorting; Price Range; Color;
-          Material; More filters. 87 items; Products. ×. Sort By. Default. Name
-          (A - Z). Name (Z - A). Price: low to high.
+          satisfaction. Craft & Decor. Sorting; Price Range; Color; Material;
+          More filters. 87 items; Products.
         </p>
       </div>
 

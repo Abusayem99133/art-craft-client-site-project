@@ -152,11 +152,12 @@ const AddCraft = () => {
                 <label className="block mt-4 mb-2 text-white">Email</label>
                 <input
                   className="w-full p-2 border rounded-md focus:outline-purple-200"
-                  defaultValue={""}
                   type="text"
                   placeholder="user email"
                   id="email"
                   name="email"
+                  defaultValue={user?.email}
+                  readOnly
                 />
               </div>
               {/* Right side */}
@@ -218,7 +219,8 @@ const AddCraft = () => {
                   placeholder="User Name"
                   id="user"
                   name="userName"
-                  defaultValue={""}
+                  defaultValue={user.displayName}
+                  readOnly
                 />
                 <label className="block mt-4 mb-2 text-white">
                   stockStatus

@@ -66,8 +66,8 @@ export const router = createBrowserRouter([
       {
         path: "/update/:id",
         element: <UpdatePage></UpdatePage>,
-        loader: ({ params }) =>
-          fetch(`http://localhost:5000/craft/${params.id}`),
+        // loader: ({ params }) =>
+        //   fetch(`http://localhost:5000/craft/${params.id}`),
       },
     ],
   },

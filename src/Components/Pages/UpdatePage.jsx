@@ -1,24 +1,33 @@
-import { useContext } from "react";
 import Swal from "sweetalert2";
-import { AuthContext } from "../../Provider/AuthProvider";
+
+import { useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 const UpdatePage = () => {
-  const { user } = useContext(AuthContext);
+  const { id } = useParams();
+  console.log(id);
+  const [artCrafts, setArtCrafts] = useState({});
 
-  const handleAddCraft = (event) => {
-    console.log(user);
+  useEffect(() => {
+    fetch(`http://localhost:5000/singleCraft/${id}`)
+      .then((res) => res.json())
+      .then((data) => {
+        setArtCrafts(data);
+        console.log(data);
+      });
+  }, [id]);
+  const handleUpdateCraft = (event) => {
     event.preventDefault();
     const form = new FormData(event.currentTarget);
     const item_name = form.get("item_name");
     const image = form.get("image");
-    const email = user.email;
     const sub_Name = form.get("sub_Name");
     const shortDescription = form.get("shortDescription");
     const price = form.get("price");
     const customization = form.get("customization");
     const rating = form.get("rating");
     const processing_time = form.get("processing_time");
-    const userName = user.displayName;
+
     const stockStatus = form.get("stockStatus");
     const addCraft = {
       image,
@@ -30,30 +39,13 @@ const UpdatePage = () => {
       customization,
       processing_time,
       stockStatus,
-      email,
-      userName,
     };
     console.log(addCraft);
-    fetch("http://localhost:5000/craft", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
+    fetch(`http://localhost:5000/updateCraft/${id}`, {
+      method: "PUT",
+      headers: { "content-type": "application/json" },
       body: JSON.stringify(addCraft),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-
-        if (data.insertedId) {
-          Swal.fire({
-            title: "Success!",
-            text: "User Added Successfully",
-            icon: "success",
-            confirmButtonText: "Done",
-          });
-        }
-      });
+    });
   };
   return (
     <div className="">
@@ -77,12 +69,12 @@ const UpdatePage = () => {
                 <span className="text-purple-400">
                   {/* {update ? "Update " : "Add "} */}
                 </span>
-                Add Craft
+                Update Craft
               </span>
             </p>
           </div>
           {/* form */}
-          <form onSubmit={handleAddCraft}>
+          <form onSubmit={handleUpdateCraft}>
             <div className="flex gap-8 ">
               <div className="flex-1">
                 <label className="block mb-2 dark:text-white">Item Name</label>
@@ -92,6 +84,7 @@ const UpdatePage = () => {
                   placeholder=" item Name"
                   id="name"
                   name="item_name"
+                  defaultValue={artCrafts.item_name}
                 />
 
                 <label className="block mt-4 mb-2 dark:text-white">
@@ -103,6 +96,7 @@ const UpdatePage = () => {
                   className="w-full p-2 border rounded-md focus:outline-purple-400"
                   type="text"
                   placeholder="Select Brand"
+                  defaultValue={artCrafts.sub_Name}
                 >
                   <option value="landscape" selected>
                     Landscape Painting
@@ -136,6 +130,7 @@ const UpdatePage = () => {
                   placeholder="short shortDescription"
                   id="shortDescription"
                   name="shortDescription"
+                  defaultValue={artCrafts.shortDescription}
                 />
                 <label
                   className="block mt-4 mb-2 dark:text-white"
@@ -149,6 +144,7 @@ const UpdatePage = () => {
                   placeholder="Enter Price"
                   id="Price"
                   name="price"
+                  defaultValue={artCrafts.price}
                 />
               </div>
               {/* Right side */}
@@ -162,6 +158,7 @@ const UpdatePage = () => {
                   placeholder="Enter Image URL"
                   id="image"
                   name="image"
+                  defaultValue={artCrafts.image}
                 />
                 <label
                   className="block mb-2 mt-4 dark:text-white"
@@ -174,6 +171,7 @@ const UpdatePage = () => {
                   name="customization"
                   className="w-full p-2 border rounded-md focus:outline-purple-400"
                   type="text"
+                  defaultValue={artCrafts.customization}
                 >
                   <option value="" selected>
                     Yes
@@ -191,6 +189,7 @@ const UpdatePage = () => {
                   placeholder="Rating"
                   id="rating"
                   name="rating"
+                  defaultValue={artCrafts.rating}
                 />
                 <label className="block mt-4 mb-2 text-white" htmlFor="rating">
                   Processing_time
@@ -201,6 +200,7 @@ const UpdatePage = () => {
                   placeholder="processing time"
                   id="time"
                   name="processing_time"
+                  defaultValue={artCrafts.processing_time}
                 />
 
                 <label className="block mt-4 mb-2 text-white">
@@ -212,6 +212,7 @@ const UpdatePage = () => {
                   placeholder="stockStatus"
                   id="status"
                   name="stockStatus"
+                  defaultValue={artCrafts.stockStatus}
                 />
               </div>
             </div>
