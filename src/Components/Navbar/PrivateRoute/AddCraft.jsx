@@ -58,29 +58,25 @@ const AddCraft = () => {
     <div className="">
       <div
         className=" pt-10
-      hero min-h-screen  rounded-[44px]"
+      hero min-h-screen "
         style={{
           backgroundImage:
             "url(https://i.postimg.cc/sDHkdbyR/pexels-pixabay-159644.jpg)",
         }}
       >
         <div className="shadow-lg p-5 border ">
-          {/* Heading */}
-          {/* dark:bg-[#1a2641d5] */}
           <div className="mt-5 mb-8">
             <p className="text-center text-3xl font-semibold">
               <span className="mr-3 text-[#FF497C]">
                 <i className="bx bxs-alarm-add"></i>
               </span>
               <span className="dark:text-white">
-                <span className="text-[#FF497C]">
-                  {/* {update ? "Update " : "Add "} */}
-                </span>
+                <span className="text-[#FF497C]"></span>
                 Add Craft
               </span>
             </p>
           </div>
-          {/* form */}
+
           <form onSubmit={handleAddCraft}>
             <div className="flex gap-8 ">
               <div className="flex-1">

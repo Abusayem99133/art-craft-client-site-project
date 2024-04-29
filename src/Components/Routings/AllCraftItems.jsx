@@ -18,7 +18,7 @@ const AllCraftItems = () => {
 
   return (
     <div>
-      <div className="overflow-x-auto">
+      <div className=" overflow-x-auto">
         <table className="table table-xs">
           <thead>
             <tr>
@@ -45,7 +45,7 @@ const AllCraftItems = () => {
                 {/* <td>{craft._id}</td> */}
                 {
                   <NavLink to={`/details/${craft?._id}`}>
-                    <button className="btn bg-purple-500 font-bold">
+                    <button className="btn bg-purple-400 font-bold">
                       View Details
                     </button>
                   </NavLink>

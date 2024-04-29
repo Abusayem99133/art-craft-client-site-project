@@ -49,7 +49,9 @@ const CraftDetails = () => {
               <span className="font-display font-bold">Price:</span> {price}
             </p>
             <div className="flex items-center gap-2">
-              <h2 className="font-display font-bold text-3xl">{rating}</h2>
+              <h2 className="font-display font-bold text-2xl">
+                Rating: {rating}
+              </h2>
             </div>
 
             <p className="mt-2  font-display">

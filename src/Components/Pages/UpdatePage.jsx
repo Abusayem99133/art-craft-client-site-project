@@ -63,7 +63,7 @@ const UpdatePage = () => {
     <div className="">
       <div
         className=" pt-10
-    hero min-h-screen  rounded-[44px]"
+    hero min-h-screen  "
         style={{
           backgroundImage:
             "url(https://i.postimg.cc/sDHkdbyR/pexels-pixabay-159644.jpg)",

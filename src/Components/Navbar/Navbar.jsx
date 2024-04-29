@@ -49,7 +49,7 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              className="menu menu-sm dropdown-content mt-3 z-[10] p-2 shadow bg-base-100 rounded-box w-52"
             >
               {Navlinks}
             </ul>
@@ -109,7 +109,7 @@ const Navbar = () => {
           </ul>
         </div>
 
-        <div className="mt-20 -ml-5  md:ml-0 md:mt-0  navbar-end">
+        <div className="lg:mt-20 -ml-5  md:ml-0 md:mt-0  navbar-end">
           <ThemeBtn></ThemeBtn>
           {user?.email ? (
             <div className="dropdown dropdown-end">
@@ -145,12 +145,12 @@ const Navbar = () => {
             <div className="space-x-4 p-4">
               {" "}
               <Link to="/signup">
-                <button className="btn btn-sm bg-lime-100 hover:bg-purple-300">
+                <button className="btn bg-lime-400 hover:bg-purple-300">
                   Signup
                 </button>
               </Link>
               <Link to="/signin">
-                <button className="btn btn-sm bg-lime-100 hover:bg-purple-300">
+                <button className="btn  bg-lime-400 hover:bg-purple-300">
                   SignIn
                 </button>
               </Link>
