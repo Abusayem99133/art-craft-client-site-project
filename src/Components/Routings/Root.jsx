@@ -11,6 +11,7 @@ import ArtList from "../Navbar/PrivateRoute/ArtList";
 
 import AllCraftItems from "./AllCraftItems";
 import UpdatePage from "../Pages/UpdatePage";
+import ArtCraftCategorys from "../Pages/ArtCraftCategorys";
 
 export const router = createBrowserRouter([
   {
@@ -68,6 +69,11 @@ export const router = createBrowserRouter([
         element: <UpdatePage></UpdatePage>,
         // loader: ({ params }) =>
         //   fetch(`http://localhost:5000/craft/${params.id}`),
+      },
+      {
+        path: "/",
+        element: <ArtCraftCategorys></ArtCraftCategorys>,
+        loader: () => fetch("http://localhost:5000/extraCraft"),
       },
     ],
   },

@@ -5,10 +5,24 @@ import ReviewProject from "../../Pages/ReviewProject";
 import Frequency from "../../Pages/Frequency";
 import ArtCraftCategorys from "../../Pages/ArtCraftCategorys";
 import { Helmet } from "react-helmet-async";
+import { useEffect, useState } from "react";
+import { Typewriter } from "react-simple-typewriter";
 
 const Home = () => {
   const allCrafts = useLoaderData();
-  console.log(allCrafts);
+
+  const [extraCraft, setExtraCraft] = useState([]);
+  useEffect(() => {
+    fetch("http://localhost:5000/extraCraft")
+      .then((res) => res.json())
+      .then((data) => {
+        // console.log(data);
+        setExtraCraft(data);
+      });
+  }, []);
+  console.log(extraCraft);
+  // console.log(allCrafts);
+
   return (
     <div>
       <Helmet>
@@ -17,7 +31,18 @@ const Home = () => {
       <Banner></Banner>
       <div className="  font-display p-2">
         <h1 className="text-center text-4xl font-bold mt-4 mb-8 bg-purple-50 shadow-xl p-2">
-          Craft Item
+          {""}
+          <span style={{ color: "purple", fontWeight: "semiBold" }}>
+            <Typewriter
+              words={["Craft Item"]}
+              loop={100}
+              cursor
+              cursorStyle="|"
+              typeSpeed={70}
+              deleteSpeed={50}
+              delaySpeed={2000}
+            />
+          </span>
         </h1>
         <p className="text-center">
           Buy your Craft Items from rfleshop with a low price and best

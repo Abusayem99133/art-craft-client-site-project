@@ -1,10 +1,22 @@
+import { Typewriter } from "react-simple-typewriter";
 import Freq from "../../assets/image/questions-concept-people-ask-frequently-asked-questions-faq-vector-flat-2M4G96R.jpg";
 
 const Frequency = () => {
   return (
     <div>
       <h1 className="text-4xl text-center mt-16 font-display font-bold shadow-xl bg-purple-50 p-2">
-        Frequency Ask?
+        {""}
+        <span style={{ color: "purple", fontWeight: "semiBold" }}>
+          <Typewriter
+            words={[" Frequency Ask?"]}
+            loop={100}
+            cursor
+            cursorStyle="|"
+            typeSpeed={70}
+            deleteSpeed={50}
+            delaySpeed={2000}
+          />
+        </span>
       </h1>
       <div className="flex justify-center items-center space-x-4 mt-16 p-4 ml-12">
         <div className="join join-vertical w-full">

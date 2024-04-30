@@ -5,6 +5,7 @@ import "swiper/css/bundle";
 import { Autoplay, Pagination } from "swiper/modules";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Typewriter } from "react-simple-typewriter";
 
 AOS.init();
 const Banner = () => {
@@ -20,7 +21,6 @@ const Banner = () => {
         <SwiperSlide>
           <div className="p-5">
             <div
-              data-aos="zoom-in-down"
               className="hero min-h-screen  rounded-[44px]"
               style={{
                 backgroundImage:
@@ -35,7 +35,18 @@ const Banner = () => {
                     data-aos="zoom-in-down"
                     data-aos-delay="1000"
                   >
-                    Landscape Painting Now
+                    {""}
+                    <span style={{ color: "purple", fontWeight: "semiBold" }}>
+                      <Typewriter
+                        words={["Landscape", "Painting Now"]}
+                        loop={100}
+                        cursor
+                        cursorStyle="|"
+                        typeSpeed={70}
+                        deleteSpeed={50}
+                        delaySpeed={2000}
+                      />
+                    </span>
                   </h1>
                   <p className="mb-5 font-display">
                     A far-reaching exploration of the very best landscape
@@ -61,9 +72,24 @@ const Banner = () => {
             >
               <div className="hero-overlay bg-opacity-60 rounded-[44px]"></div>
               <div className="hero-content text-center text-neutral-content">
-                <div className="max-w-md">
+                <div className="">
                   <h1 className="mb-5 text-5xl font-bold font-display">
-                    Color Explosion with pop artist Tristan Eaton
+                    {""}
+                    <span style={{ color: "red", fontWeight: "bold" }}>
+                      {" "}
+                      <Typewriter
+                        words={[
+                          "Color Explosion with pop",
+                          " artist Tristan Eaton",
+                        ]}
+                        loop={100}
+                        cursor
+                        cursorStyle="|"
+                        typeSpeed={100}
+                        deleteSpeed={50}
+                        delaySpeed={2000}
+                      />
+                    </span>
                   </h1>
                   <p className="mb-5 font-display">
                     Color Explosion with pop artist Tristan Eaton Born in L.A.
@@ -90,9 +116,20 @@ const Banner = () => {
             >
               <div className="hero-overlay bg-opacity-60 rounded-[44px]"></div>
               <div className="hero-content text-center text-neutral-content">
-                <div className="max-w-md">
+                <div className="">
                   <h1 className="mb-5 text-5xl font-bold font-display">
-                    Water Color Painting
+                    {""}
+                    <span style={{ color: "orange" }}>
+                      <Typewriter
+                        words={["Water Color Painting"]}
+                        loop={100}
+                        cursor
+                        cursorStyle="|"
+                        typeSpeed={100}
+                        deleteSpeed={50}
+                        delaySpeed={1000}
+                      />
+                    </span>
                   </h1>
                   <p className="mb-5 font-display">
                     Wow, what a title for this post! For a tongue twister,
@@ -100,6 +137,7 @@ const Banner = () => {
                     times in a row. But it is really the best way to describe
                     these beautiful and unique little watercolor scenes
                   </p>
+
                   <button className=" font-display font-bold text-2xl border-2 p-3 rounded-xl border-purple-300  hover:bg-purple-400">
                     Buy Now
                   </button>
@@ -121,7 +159,19 @@ const Banner = () => {
               <div className="hero-content text-center text-neutral-content">
                 <div className="max-w-md">
                   <h1 className="mb-5 text-5xl font-bold font-display">
-                    Oil Painting is here
+                    {""}
+                    <span style={{ color: "yellow" }}>
+                      {" "}
+                      <Typewriter
+                        words={["   Oil Painting is here"]}
+                        loop={100}
+                        cursor
+                        cursorStyle="|"
+                        typeSpeed={100}
+                        deleteSpeed={50}
+                        delaySpeed={1000}
+                      />
+                    </span>
                   </h1>
                   <p className="mb-5 font-display">
                     A paintbrush and a knife for the palette, as well as a
@@ -149,7 +199,18 @@ const Banner = () => {
               <div className="hero-content text-center text-neutral-content">
                 <div className="max-w-md">
                   <h1 className="mb-5 text-5xl font-bold font-display">
-                    Charcoal Sketching
+                    {""}
+                    <span style={{ color: "gray" }}>
+                      <Typewriter
+                        words={[" Charcoal Sketching"]}
+                        loop={100}
+                        cursor
+                        cursorStyle="|"
+                        typeSpeed={100}
+                        deleteSpeed={50}
+                        delaySpeed={1000}
+                      />
+                    </span>
                   </h1>
                   <p className="mb-5 font-display">
                     Well technically speaking, charcoal is burnt organic
@@ -176,7 +237,18 @@ const Banner = () => {
               <div className="hero-content text-center text-neutral-content">
                 <div className="max-w-md">
                   <h1 className="mb-5 text-5xl font-bold font-display">
-                    Cartoon Drawing
+                    <span style={{ color: "brown" }}>
+                      {" "}
+                      <Typewriter
+                        words={[" Cartoon Drawing"]}
+                        loop={100}
+                        cursor
+                        cursorStyle="|"
+                        typeSpeed={100}
+                        deleteSpeed={50}
+                        delaySpeed={1000}
+                      />
+                    </span>
                   </h1>
                   <p className="mb-5 font-display">
                     Many kids often learn how to draw by copying their favorite

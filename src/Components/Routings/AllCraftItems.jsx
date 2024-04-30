@@ -7,15 +7,6 @@ import { NavLink, useLoaderData } from "react-router-dom";
 const AllCraftItems = () => {
   const item = useLoaderData();
   console.log(item);
-  // const { user } = useContext(AuthContext);
-  // const [item, setItem] = useState([]);
-  // useEffect(() => {
-  //   fetch(`http://localhost:5000/artCraft`)
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       setItem(data);
-  //     });
-  // }, [user]);
 
   return (
     <div>

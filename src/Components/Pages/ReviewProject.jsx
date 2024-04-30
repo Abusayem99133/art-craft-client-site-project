@@ -2,11 +2,25 @@ import { FaStar } from "react-icons/fa";
 import img1 from "../../assets/image/images.jpeg";
 import img2 from "../../assets/image/images (1).jpeg";
 import img3 from "../../assets/image/FjU2lkcWYAgNG6d.jpg";
+import { Typewriter } from "react-simple-typewriter";
 const ReviewProject = () => {
   return (
     <div>
       <div className="mt-16 text-center shadow-xl bg-purple-50 p-2">
-        <h1 className="text-4xl font-bold font-display">Customer Review</h1>
+        <h1 className="text-4xl font-bold font-display">
+          {""}
+          <span style={{ color: "purple", fontWeight: "semiBold" }}>
+            <Typewriter
+              words={["Customer Review"]}
+              loop={100}
+              cursor
+              cursorStyle="|"
+              typeSpeed={70}
+              deleteSpeed={50}
+              delaySpeed={2000}
+            />
+          </span>
+        </h1>
         <p className="font-display">
           As well as being key sales metrics, reviews are also an integral
           source of customer feedback,
