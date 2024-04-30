@@ -166,7 +166,7 @@ const Navbar = () => {
               </ul>
             </div>
           ) : (
-            <div className="space-x-4 flex ">
+            <div className="space-x-4 md:flex ">
               {" "}
               <Link to="/signup">
                 <button className="btn bg-lime-400 hover:bg-purple-300">
