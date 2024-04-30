@@ -2,18 +2,7 @@ import { NavLink } from "react-router-dom";
 import PropTypes from "prop-types";
 const CraftItems = ({ craft }) => {
   console.log(craft);
-  const {
-    image,
-    item_name,
-    sub_Name,
-    shortDescription,
-    price,
-    rating,
-    customization,
-    processing_time,
-    stockStatus,
-    _id,
-  } = craft;
+  const { image, item_name, price, stockStatus, _id } = craft;
   return (
     <div>
       <div className=" card mt-2 bg-base-100 shadow-2xl">

@@ -1,8 +1,8 @@
+import error from "../assets/image/404.gif";
 const ErrorPage = () => {
   return (
-    <div>
-      <h1 className="text-4xl text-center">404</h1>
-      <p className="text-center text-4xl ">Not Found</p>
+    <div className="hero min-h-screen  bg-purple-300">
+      <img src={error} alt="" />
     </div>
   );
 };

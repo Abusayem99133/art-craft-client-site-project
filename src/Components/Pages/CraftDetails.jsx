@@ -15,6 +15,8 @@ const CraftDetails = () => {
     customization,
     processing_time,
     stockStatus,
+    userName,
+    email,
   } = data;
   return (
     <div>
@@ -57,6 +59,14 @@ const CraftDetails = () => {
             <p className="mt-2  font-display">
               <span className="font-bold">Description:</span> {shortDescription}
             </p>
+            <h3 className="mt-4 font-display text-3xlf">User Information</h3>
+            <hr className="font-bold" />
+            <p className="mt-8">
+              <span className="font-bold ">User-Name:</span> {userName}
+            </p>
+            <h3>
+              <span className="font-bold font-display">Email:</span> {email}
+            </h3>
           </div>
         </div>
       </div>

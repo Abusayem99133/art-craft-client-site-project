@@ -94,8 +94,8 @@ const Banner = () => {
                   <p className="mb-5 font-display">
                     Color Explosion with pop artist Tristan Eaton Born in L.A.
                     in 1978, Tristan Eaton started pursuing street art as a
-                    teenager, painting everything from billboards to dumpsters
-                    in the ur
+                    teenager, <br /> painting everything from billboards to
+                    dumpsters in the ur
                   </p>
                   <button className=" font-display font-bold text-2xl border-2 p-3 rounded-xl border-purple-300  hover:bg-purple-400">
                     Buy Now
@@ -134,8 +134,8 @@ const Banner = () => {
                   <p className="mb-5 font-display">
                     Wow, what a title for this post! For a tongue twister,
                     quickly repeat ‘winter woodland watercolor tutorial’ 10
-                    times in a row. But it is really the best way to describe
-                    these beautiful and unique little watercolor scenes
+                    times in a row. <br /> But it is really the best way to
+                    describe these beautiful and unique little watercolor scenes
                   </p>
 
                   <button className=" font-display font-bold text-2xl border-2 p-3 rounded-xl border-purple-300  hover:bg-purple-400">
