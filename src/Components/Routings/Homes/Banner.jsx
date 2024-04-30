@@ -27,7 +27,7 @@ const Banner = () => {
                   "url(https://i.postimg.cc/gcMn5Fxh/pexels-karamuse-2346120.jpg)",
               }}
             >
-              <div className="hero-overlay bg-opacity-60 rounded-[44px]"></div>
+              <div className=" md:hero-overlay md:bg-opacity-60 rounded-[44px]"></div>
               <div className="hero-content text-center text-neutral-content">
                 <div className="max-w-md">
                   <h1

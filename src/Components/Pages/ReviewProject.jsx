@@ -26,7 +26,7 @@ const ReviewProject = () => {
           source of customer feedback,
         </p>
       </div>
-      <div className="mt-12 flex items-center justify-center p-5 space-x-4">
+      <div className="mt-12 md:flex items-center justify-center md:p-5 space-x-4">
         <div className="card w-96 bg-base-100 shadow-xl">
           <figure className="px-10 pt-10">
             <img src={img1} alt="Shoes" className="rounded-full " />

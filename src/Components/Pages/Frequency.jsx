@@ -18,7 +18,10 @@ const Frequency = () => {
           />
         </span>
       </h1>
-      <div className="flex justify-center items-center space-x-4 mt-16 p-4 ml-12">
+      <div className=" md:flex justify-center items-center space-x-4 mt-16 p-4 md:ml-12">
+        <div>
+          <img className=" " src={Freq} alt="" />
+        </div>
         <div className="join join-vertical w-full">
           <div className="collapse collapse-arrow join-item border border-base-300">
             <input type="radio" name="my-accordion-4" defaultChecked />
@@ -104,9 +107,6 @@ const Frequency = () => {
               </p>
             </div>
           </div>
-        </div>
-        <div>
-          <img className=" " src={Freq} alt="" />
         </div>
       </div>
     </div>
