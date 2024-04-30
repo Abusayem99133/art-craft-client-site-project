@@ -28,7 +28,7 @@ const ArtCraftCategorys = () => {
           />
         </span>
       </h1>
-      <div className=" mt-6 gap-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center items-center">
+      <div className=" mt-6 gap-2  space-y-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center items-center">
         {extraCraft?.map((category) => (
           <Categorys key={category._id} category={category}></Categorys>
         ))}
