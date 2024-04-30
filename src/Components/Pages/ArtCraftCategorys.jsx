@@ -3,7 +3,7 @@
 const ArtCraftCategorys = () => {
   // const [extraCraft, setExtraCraft] = useState([]);
   // useEffect(() => {
-  //   fetch("http://localhost:5000/extraCraft")
+  //   fetch("https:/my-art-craft-server-project.vercel.app/extraCraft")
   //     .then((res) => res.json())
   //     .then((data) => {
   //       // console.log(data);

@@ -12,7 +12,9 @@ const ArtList = () => {
   const [deleteItem, setDeleteItem] = useState(false);
   const [filter, setFilter] = useState("All");
   useEffect(() => {
-    fetch(`http://localhost:5000/artCraft/${user?.email}`)
+    fetch(
+      `https:/my-art-craft-server-project.vercel.app/artCraft/${user?.email}`
+    )
       .then((res) => res.json())
       .then((data) => {
         setMyCraft(data);
@@ -30,9 +32,12 @@ const ArtList = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/craftDelete/${id}`, {
-          method: "DELETE",
-        })
+        fetch(
+          `https:/my-art-craft-server-project.vercel.app/craftDelete/${id}`,
+          {
+            method: "DELETE",
+          }
+        )
           .then((res) => res.json())
           .then((data) => {
             console.log(data);
@@ -75,7 +80,7 @@ const ArtList = () => {
       <div className=" mt-6 gap-6  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {myCraft
           ?.filter((item) => filter === "All" || item.customization === filter)
-          .map((item, index) => (
+          ?.map((item, index) => (
             <div key={index} className="card mt-2  bg-slate-100 shadow-2xl">
               <figure className="px-10 pt-10">
                 <img src={item?.image} alt="Shoes" />
