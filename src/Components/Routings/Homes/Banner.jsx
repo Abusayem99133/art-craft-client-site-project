@@ -2,7 +2,7 @@ import "animate.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/bundle";
-import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { Autoplay, Pagination } from "swiper/modules";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -11,8 +11,7 @@ const Banner = () => {
   return (
     <div>
       <Swiper
-        navigation={true}
-        modules={[Navigation, Pagination, Autoplay]}
+        modules={[Pagination, Autoplay]}
         loop={true}
         autoplay={{
           delay: 2000,

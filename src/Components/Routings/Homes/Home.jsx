@@ -3,6 +3,7 @@ import Banner from "./Banner";
 import CraftItems from "./CraftItems";
 import ReviewProject from "../../Pages/ReviewProject";
 import Frequency from "../../Pages/Frequency";
+import ArtCraftCategorys from "../../Pages/ArtCraftCategorys";
 
 const Home = () => {
   const allCrafts = useLoaderData();
@@ -26,6 +27,9 @@ const Home = () => {
         {allCrafts?.slice(0 - 6)?.map((craft) => (
           <CraftItems key={craft._id} craft={craft}></CraftItems>
         ))}
+      </div>
+      <div>
+        <ArtCraftCategorys></ArtCraftCategorys>
       </div>
       <div>
         <ReviewProject></ReviewProject>

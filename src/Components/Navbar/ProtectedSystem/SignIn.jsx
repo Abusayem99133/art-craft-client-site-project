@@ -45,7 +45,7 @@ const SignIn = () => {
         className="hero min-h-screen bg-base-200"
         style={{
           backgroundImage:
-            "url(https://i.postimg.cc/wT5YWMXk/house-in-nature-4k-1540131726-jpg.webp)",
+            "url(https://i.postimg.cc/N0JzdZQ5/pexels-michael-block-1691617-3225517.jpg)",
           backgroundRepeat: "no-repeat",
         }}
       >

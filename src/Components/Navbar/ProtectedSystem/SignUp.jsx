@@ -53,7 +53,7 @@ const SignUp = () => {
         className="hero min-h-screen bg-base-50"
         style={{
           backgroundImage:
-            "url(https://i.postimg.cc/wT5YWMXk/house-in-nature-4k-1540131726-jpg.webp)",
+            "url(https://i.postimg.cc/yxqn5HtY/pexels-jake-pnw-1761279.jpg)",
           backgroundRepeat: "no-repeat",
         }}
       >

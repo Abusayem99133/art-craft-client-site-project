@@ -1,11 +1,26 @@
 import { Link, NavLink } from "react-router-dom";
 import profile from "../../assets/Profile.jpg";
 import { AuthContext } from "../../Provider/AuthProvider";
-import { useContext } from "react";
-import ThemeBtn from "./ThemeBtn";
+import { useContext, useEffect, useState } from "react";
 import logo from "../../assets/Canvas Haven.png";
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
+  const [theme, setTheme] = useState("light");
+  const handleToggle = (e) => {
+    if (e.target.checked) {
+      setTheme("dark");
+    } else {
+      setTheme("light");
+    }
+  };
+
+  useEffect(() => {
+    localStorage.setItem("theme", theme);
+    const localTheme = localStorage.getItem("theme");
+
+    document.querySelector("html").setAttribute("data-theme", localTheme);
+  }, [theme]);
+
   const Navlinks = (
     <>
       <li>
@@ -109,8 +124,17 @@ const Navbar = () => {
           </ul>
         </div>
 
-        <div className="lg:mt-20 -ml-5  md:ml-0 md:mt-0  navbar-end">
-          <ThemeBtn></ThemeBtn>
+        <div className="l lg:-ml-5  md:ml-0 md:mt-0  navbar-end">
+          <div className="form-control w-52">
+            <label className="cursor-pointer label">
+              <span className="label-text"></span>
+              <input
+                type="checkbox"
+                className="toggle toggle-secondary"
+                onChange={handleToggle}
+              />
+            </label>
+          </div>
           {user?.email ? (
             <div className="dropdown dropdown-end">
               <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
@@ -142,16 +166,16 @@ const Navbar = () => {
               </ul>
             </div>
           ) : (
-            <div className="space-x-4 p-4">
+            <div className="space-x-4 flex ">
               {" "}
               <Link to="/signup">
                 <button className="btn bg-lime-400 hover:bg-purple-300">
-                  Signup
+                  Register
                 </button>
               </Link>
               <Link to="/signin">
                 <button className="btn  bg-lime-400 hover:bg-purple-300">
-                  SignIn
+                  Login
                 </button>
               </Link>
             </div>

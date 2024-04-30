@@ -1,8 +1,12 @@
-# React + Vite
+Web Site Name: Art & Craft Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<hr/>
+Live Link:
+<hr/>
+<li>This site is beautiful and uniq</li>
+<li>This Project use in the latest language in React JS</li>
+<li>
+The project use to slider </li>
+<li>The project is a meaningful footer</li>
+<li>The update section and delete section work in special and updated</li>
+<p> Fast time this project view and client see the Landscape painting and Portrait Drawing, Water Color Painting, Charcoal Sketching and at last show the Cartoon Drawing</p>
