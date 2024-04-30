@@ -13,7 +13,7 @@ const ArtList = () => {
   const [filter, setFilter] = useState("All");
   useEffect(() => {
     fetch(
-      `https:/my-art-craft-server-project.vercel.app/artCraft/${user?.email}`
+      `https://my-art-craft-server-project.vercel.app/artCraft/${user?.email}`
     )
       .then((res) => res.json())
       .then((data) => {
@@ -33,7 +33,7 @@ const ArtList = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         fetch(
-          `https:/my-art-craft-server-project.vercel.app/craftDelete/${id}`,
+          `https://my-art-craft-server-project.vercel.app/craftDelete/${id}`,
           {
             method: "DELETE",
           }
