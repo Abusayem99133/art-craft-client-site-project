@@ -1,17 +1,13 @@
 const Categorys = ({ category }) => {
-  const { image, sub_name, item_name } = category;
+  const { image, item_name } = category;
   return (
-    <div>
-      <div className="card w-96 bg-base-100 shadow-xl image-full">
+    <div className=" flex justify-center items-center">
+      <div className="card w-96 bg-base-100 shadow-xl image-full ">
         <figure>
           <img src={image} alt="Shoes" />
         </figure>
-        <div className="card-body">
-          <h2 className="card-title">{item_name}</h2>
-
-          <div className="card-actions justify-center">
-            <button className="btn ">View Details</button>
-          </div>
+        <div className="card-body flex justify-center items-center max-auto">
+          <h2 className="card-title text-4xl font-display ">{item_name}</h2>
         </div>
       </div>
     </div>
