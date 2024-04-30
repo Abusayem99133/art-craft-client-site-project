@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { AuthContext } from "../../../Provider/AuthProvider";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 const AddCraft = () => {
   const { user } = useContext(AuthContext);
 
@@ -56,6 +57,9 @@ const AddCraft = () => {
   };
   return (
     <div className="">
+      <Helmet>
+        <title>AddCart-Page</title>
+      </Helmet>
       <div
         className=" pt-10
       hero min-h-screen "

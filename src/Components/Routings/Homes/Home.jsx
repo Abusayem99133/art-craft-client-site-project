@@ -4,12 +4,16 @@ import CraftItems from "./CraftItems";
 import ReviewProject from "../../Pages/ReviewProject";
 import Frequency from "../../Pages/Frequency";
 import ArtCraftCategorys from "../../Pages/ArtCraftCategorys";
+import { Helmet } from "react-helmet-async";
 
 const Home = () => {
   const allCrafts = useLoaderData();
   console.log(allCrafts);
   return (
     <div>
+      <Helmet>
+        <title>Home-Page</title>
+      </Helmet>
       <Banner></Banner>
       <div className="  font-display p-2">
         <h1 className="text-center text-4xl font-bold mt-4 mb-8 bg-purple-50 shadow-xl p-2">

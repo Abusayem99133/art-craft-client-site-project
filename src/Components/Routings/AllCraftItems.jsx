@@ -1,6 +1,7 @@
 // import { useContext, useEffect, useState } from "react";
 // import { AuthContext } from "../../Provider/AuthProvider";
 
+import { Helmet } from "react-helmet-async";
 import { NavLink, useLoaderData } from "react-router-dom";
 
 const AllCraftItems = () => {
@@ -18,6 +19,9 @@ const AllCraftItems = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>AllCraft_page</title>
+      </Helmet>
       <div className=" overflow-x-auto">
         <table className="table table-xs">
           <thead>

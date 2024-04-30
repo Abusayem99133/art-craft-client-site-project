@@ -2,6 +2,7 @@ import Swal from "sweetalert2";
 
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet-async";
 
 const UpdatePage = () => {
   const { id } = useParams();
@@ -60,7 +61,10 @@ const UpdatePage = () => {
       });
   };
   return (
-    <div className="">
+    <div>
+      <Helmet>
+        <title>Update-Page</title>
+      </Helmet>
       <div
         className=" pt-10
     hero min-h-screen  "
@@ -70,17 +74,13 @@ const UpdatePage = () => {
         }}
       >
         <div className="shadow-lg p-5 border ">
-          {/* Heading */}
-          {/* dark:bg-[#1a2641d5] */}
           <div className="mt-5 mb-8">
             <p className="text-center text-3xl font-semibold">
               <span className="mr-3 text-purple-400">
                 <i className="bx bxs-alarm-add"></i>
               </span>
               <span className="dark:text-white">
-                <span className="text-purple-400">
-                  {/* {update ? "Update " : "Add "} */}
-                </span>
+                <span className="text-purple-400"></span>
                 Update Craft
               </span>
             </p>

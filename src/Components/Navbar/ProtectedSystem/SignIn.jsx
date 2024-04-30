@@ -4,6 +4,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../Provider/AuthProvider";
 import toast, { Toaster } from "react-hot-toast";
 import { FcGoogle } from "react-icons/fc";
+import { Helmet } from "react-helmet-async";
 
 const SignIn = () => {
   const { signInUser, googleSignIn, githubSignIn } = useContext(AuthContext);
@@ -41,6 +42,9 @@ const SignIn = () => {
   };
   return (
     <div className="">
+      <Helmet>
+        <title>SignIn - Page</title>
+      </Helmet>
       <div
         className="hero min-h-screen bg-base-200"
         style={{

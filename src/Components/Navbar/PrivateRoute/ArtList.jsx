@@ -4,6 +4,7 @@ import { AuthContext } from "../../../Provider/AuthProvider";
 
 import { IoLogoUsd } from "react-icons/io5";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 const ArtList = () => {
   const { user } = useContext(AuthContext);
 
@@ -49,6 +50,9 @@ const ArtList = () => {
   };
   return (
     <div>
+      <Helmet>
+        <title>ArtList - Page</title>
+      </Helmet>
       <div className=" dropdown flex justify-center">
         <div tabIndex={0} role="button" className="btn m-1">
           Customization
