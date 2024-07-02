@@ -12,3 +12,7 @@ The project use to slider.</li>
 <li>The update section and delete section work in special and updated.</li>
 <hr/>
 <p> Fast time this project view and client see the Landscape painting and Portrait Drawing, Water Color Painting, Charcoal Sketching and at last show the Cartoon Drawing</p>
+## Features
+- **Project Showcase**: Allows users to display their art and craft projects with detailed descriptions and images.
+- **Tutorials & Techniques**: Users can share and explore tutorials and techniques to enhance their skills.
+- **Community Interaction**: Facilitates interaction among users through comments and feedback on projects.
